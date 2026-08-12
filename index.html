@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexora Intelligence — a student-built AI intelligence workspace for turning information into decisions.">
+  <title>Nexora Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div>
+          <strong>Nexora</strong>
+          <span>Intelligence</span>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav-item active" data-view="overview">◈ <span>Overview</span></button>
+        <button class="nav-item" data-view="insights">◌ <span>Insights</span></button>
+        <button class="nav-item" data-view="signals">⌁ <span>Signals</span></button>
+        <button class="nav-item" data-view="workspace">□ <span>Workspace</span></button>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div>
+          <b>System ready</b>
+          <small>Local intelligence workspace</small>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">INTELLIGENCE WORKSPACE</p>
+          <h1 id="page-title">Turn information into direction.</h1>
+        </div>
+        <button class="primary-btn" id="analyzeBtn">Run analysis <span>↗</span></button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="pill">NEXORA ENGINE <span>●</span></div>
+          <h2>See the signal<br><em>before the noise.</em></h2>
+          <p>Nexora brings notes, signals and structured thinking into one focused workspace—designed to help you move from raw information to clear next steps.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="demoBtn">Analyze sample data</button>
+            <button class="ghost-btn" id="scrollBtn">Explore workspace ↓</button>
+          </div>
+        </div>
+        <div class="orbital">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="core"><span>N</span></div>
+          <div class="node node-1">DATA</div>
+          <div class="node node-2">SIGNAL</div>
+          <div class="node node-3">ACTION</div>
+        </div>
+      </section>
+
+      <section class="metrics" id="workspace-section">
+        <div class="metric"><span>ACTIVE SIGNALS</span><strong id="signalCount">12</strong><small>+3 this session</small></div>
+        <div class="metric"><span>CONFIDENCE</span><strong id="confidence">87%</strong><small>High-confidence pattern</small></div>
+        <div class="metric"><span>INSIGHTS</span><strong id="insightCount">24</strong><small>4 newly generated</small></div>
+        <div class="metric"><span>DECISIONS</span><strong id="decisionCount">08</strong><small>Ready for review</small></div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel large">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">LIVE ANALYSIS</p>
+              <h3>Intelligence map</h3>
+            </div>
+            <span class="live">LIVE</span>
+          </div>
+          <div class="chart-wrap">
+            <div class="chart-labels"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div>
+            <div class="chart">
+              <div class="gridline g1"></div><div class="gridline g2"></div><div class="gridline g3"></div><div class="gridline g4"></div>
+              <svg viewBox="0 0 700 240" preserveAspectRatio="none" aria-label="Intelligence trend chart">
+                <defs>
+                  <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-opacity=".24"/>
+                    <stop offset="100%" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="area" d="M0,190 C70,180 85,135 145,150 S220,90 285,115 S365,155 425,105 S510,75 565,92 S640,45 700,30 L700,240 L0,240 Z"/>
+                <path class="line" d="M0,190 C70,180 85,135 145,150 S220,90 285,115 S365,155 425,105 S510,75 565,92 S640,45 700,30"/>
+              </svg>
+              <div class="chart-tooltip"><b>87%</b><span>confidence peak</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div><p class="eyebrow">PRIORITY</p><h3>Next actions</h3></div>
+            <button class="icon-btn" id="refreshBtn">↻</button>
+          </div>
+          <div class="action-list" id="actionList">
+            <div class="action"><span class="rank">01</span><div><b>Validate the strongest signal</b><small>Evidence alignment · 92%</small></div><span>→</span></div>
+            <div class="action"><span class="rank">02</span><div><b>Review emerging pattern</b><small>Trend acceleration · 84%</small></div><span>→</span></div>
+            <div class="action"><span class="rank">03</span><div><b>Capture decision context</b><small>Knowledge gap · 76%</small></div><span>→</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><div><p class="eyebrow">SIGNAL FEED</p><h3>What changed</h3></div></div>
+          <div class="feed">
+            <div><span class="feed-dot"></span><div><b>Pattern strengthened</b><small>Competitive signal crossed threshold</small></div><time>2m</time></div>
+            <div><span class="feed-dot"></span><div><b>New evidence</b><small>Three related observations grouped</small></div><time>9m</time></div>
+            <div><span class="feed-dot muted"></span><div><b>Low-confidence anomaly</b><small>Requires additional context</small></div><time>18m</time></div>
+          </div>
+        </div>
+
+        <div class="panel insight-card">
+          <div class="panel-head"><div><p class="eyebrow">NEXORA INSIGHT</p><h3>One useful conclusion</h3></div><span class="spark">✦</span></div>
+          <p id="insightText">The strongest opportunity is not the largest signal—it is the signal with enough supporting evidence to act on confidently.</p>
+          <button class="text-btn" id="insightBtn">Generate another insight →</button>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Nexora Intelligence</span>
+        <span>Built as an independent student project · v1.0</span>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast">Analysis complete.</div>
+  <script src="app.js"></script>
+</body>
+</html>
